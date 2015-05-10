@@ -23,7 +23,7 @@ feature 'player preps for game' do
   scenario 'creates a board of size 10 x 10' do
     board = Board.new
     board.create 10,10
-    expect(board.area).to eq 100
+    expect(board.area).to eq :j10
   end
 
 end

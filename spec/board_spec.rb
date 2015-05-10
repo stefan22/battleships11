@@ -29,7 +29,7 @@ describe Board do
 
   it 'creates a board of size 10 x 10' do
     subject.create 10,10
-    expect(subject.area).to eq 100
+    expect(subject.area).to eq :j10
   end
 
 end

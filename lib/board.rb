@@ -40,12 +40,14 @@ class Board
     @grid[coordinates]
   end
 
-  def create(width,length)
-    @size = width * length
+  def create(column,row)
+    letters = ('a'..'z').to_a
+    column = letters[column -1]
+    @size = (column + row.to_s).to_sym
   end
 
   def area
-    @size 
+    @size
   end
 
 
