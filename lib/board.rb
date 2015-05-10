@@ -1,10 +1,11 @@
 class Board
 
 
+
   def initialize
     @grid = {}
+    @size = 0
   end
-
 
   def place_ship(ship,location,direction)
     #@grid[location] = ship
@@ -19,7 +20,7 @@ class Board
           @grid[xy] = ship
         end
 
-    #location :b1 and need :b1,:c1
+    #location :b1 and need :b1,:c1, :d1, :e1
     elsif direction == :right
         letters = ('a'..'z').to_a
         x = location[0]
@@ -37,6 +38,14 @@ class Board
 
   def location(coordinates)
     @grid[coordinates]
+  end
+
+  def create(width,length)
+    @size = width * length
+  end
+
+  def area
+    @size 
   end
 
 
